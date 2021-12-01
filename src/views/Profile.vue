@@ -197,6 +197,10 @@ import {
         this.email = localStorage.getItem("currentUser");
         this.password = localStorage.getItem("password");
         this.phone = localStorage.getItem("phone");
+        if(localStorage.getItem("currentUser") == ""){
+          this.$router.push({ name: "login" });
+  
+      }
          
             
     },
