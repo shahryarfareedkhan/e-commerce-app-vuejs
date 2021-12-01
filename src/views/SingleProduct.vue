@@ -96,6 +96,12 @@ export default {
   computed: {
     ...mapGetters(["getSingleProduct"]),
   },
+  mounted(){
+    if(localStorage.getItem("currentUser") == ""){
+          this.$router.push({ name: "login" });
+  
+      }
+  }
 };
 </script>
 

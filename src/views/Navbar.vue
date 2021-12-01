@@ -34,6 +34,7 @@ export default {
   name: "Navbar",
   methods: {
     signupbt() {
+      localStorage.setItem("currentUser","");
       this.$router.push({ name: "Register" });
     },
   },

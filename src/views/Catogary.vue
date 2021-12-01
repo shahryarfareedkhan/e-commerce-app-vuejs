@@ -1,18 +1,14 @@
 <template>
   <div>
-                  <Navbar/>
+    <Navbar />
 
     <v-container>
-      <!-- <v-btn class="grey" to="/Home">Home</v-btn> -->
-
-
-           <v-list-item-title
-        class="text-h3 text-center  font-weight-bold text-uppercase mt-5  "
+      <v-list-item-title
+        class="text-h3 text-center font-weight-bold text-uppercase mt-5"
         >Categories</v-list-item-title
       >
 
       <v-row>
-
         <v-col
           class="mt-5"
           sm="3"
@@ -41,24 +37,29 @@
 
           <v-card-title> {{ data.title }} </v-card-title>
           <v-rating
-                v-model="rating"
-                color="blue-grey darken-3"
-                background-color="grey darken-1"
-                empty-icon="$ratingFull"
-                half-increments
-                hover
-                small
-              ></v-rating>
+            v-model="rating"
+            color="blue-grey darken-3"
+            background-color="grey darken-1"
+            empty-icon="$ratingFull"
+            half-increments
+            hover
+            small
+          ></v-rating>
 
           <!-- <v-card-subtitle> 1,000 miles of wonder </v-card-subtitle> -->
-          <v-chip class="ma-3"  color="blue-grey lighten-1" text-color="white">
+          <v-chip class="ma-3" color="blue-grey lighten-1" text-color="white">
             ${{ data.price }}
           </v-chip>
 
           <v-btn class="mx-6" fab dark small color="blue-grey lighten-1">
             <v-icon dark> mdi-heart </v-icon>
-          </v-btn >
-          <v-btn class="ml-2 " color="blue-grey lighten-1"  @click="fatchsingleProductData(data.id)">Add to Cart</v-btn>
+          </v-btn>
+          <v-btn
+            class="ml-2"
+            color="blue-grey lighten-1"
+            @click="fatchsingleProductData(data.id)"
+            >Add to Cart</v-btn
+          >
 
           <v-card-actions>
             <v-btn color="blue-grey darken-3" text> See Description </v-btn>
@@ -97,20 +98,19 @@
       -->
     </v-container>
     <!-- <Footer/> -->
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import { mapGetters, mapState } from "vuex";
-import Navbar from '../views/Navbar';
-import Footer from '../views/Footer'
-
+import Navbar from "../views/Navbar";
+import Footer from "../views/Footer";
 
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
   },
   data: () => ({
     show: false,
@@ -130,6 +130,10 @@ export default {
 
   mounted() {
     this.$store.dispatch("loadCatogary");
+    if(localStorage.getItem("currentUser") == ""){
+          this.$router.push({ name: "login" });
+  
+      }
   },
   computed: {
     ...mapState(["Catogary"]),

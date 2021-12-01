@@ -164,6 +164,13 @@ export default {
   mounted() {
     this.$store.dispatch("loadPosts");
     this.$store.dispatch("loadCatogary");
+    
+    if(localStorage.getItem("currentUser") == ""){
+          this.$router.push({ name: "login" });
+  
+      }
+
+
   },
   computed: {
     ...mapState(["posts"]),
@@ -207,7 +214,10 @@ export default {
     },
     signupbt() {
       this.$router.push({ name: "Register" });
+            localStorage.setItem("currentUser","");
+
     },
   },
+
 };
 </script>
