@@ -196,7 +196,6 @@ import
           localStorage.setItem("currentUser", this.userData.email);
           localStorage.setItem("password", this.userData.password);
           localStorage.setItem("phone", this.userData.phone);
-             this.$router.push({ name: "login" });
            
         
         
@@ -204,9 +203,15 @@ import
 
         Object.keys(this.form).forEach(f => {
           if (!this.form[f]) this.formHasErrors = true
-         
           this.$refs[f].validate(true)
-         
+          if(this.$refs[f].validate(true)
+          ){
+            
+            this.$router.push({ name: "login" });
+
+          }
+          
+
         })
       },
     },
