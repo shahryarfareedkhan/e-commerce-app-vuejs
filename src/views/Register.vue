@@ -1,18 +1,21 @@
 <template>
 <div class="main">
-  <!-- <Navbar/> -->
+  <v-row justify="center" class="mt-0">
+     <img src="https://cdn.mos.cms.futurecdn.net/kPTwCmCKYJUwGbDbRZr9MX.png" alt="" width="230px" height="150px">
+  </v-row>
+
   <v-row justify="center">
     <v-col
-     class="mt-10"
-      cols="12"
-      sm="10"
-      md="8"
-      lg="6"
+     class="mt-0"
+      cols="10"
+      sm="8"
+      md="6"
+      lg="4"
     >
     <v-form ref="form" >
       <v-card ref="form">
         <v-card-text>
-             <h1 class="text-center grey--text">Signup</h1>
+             <h1 class="text-center black--text">Signup</h1>
           <v-text-field
             ref="firstname"
             v-model="userData.name.firstname"
@@ -71,13 +74,14 @@
             :rules="numberRule"
             :error-messages="errorMessages"
             label="Phone"
-            placeholder="123456789"
+            placeholder="03001234567"
             required
           ></v-text-field>
         </v-card-text>
-        <v-divider class="mt-12"></v-divider>
-        <v-card-actions>
+        <v-divider ></v-divider>
+        <v-card-actions >
                <v-btn
+               
             color="success"
             text
             @click="submit"
@@ -106,8 +110,8 @@
             </v-tooltip>
           </v-slide-x-reverse-transition>
        
-        </v-card-actions>
-          <span class="link ">Sign in to your Account <router-link to="/">login</router-link></span>
+        </v-card-actions >
+          <span class="link mt-3">Sign in to your Account <router-link to="/">login</router-link></span>
       </v-card><br>
     </v-form>
     </v-col>

@@ -14,7 +14,7 @@
     >
       <v-card ref="form" >
         <v-card-text>
-             <h1 class="text-center grey--text">Profile</h1>
+             <h1 class="text-center black--text">Profile</h1>
          <v-text-field
             ref="firstname"
             v-model="firstname"

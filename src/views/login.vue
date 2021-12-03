@@ -1,14 +1,18 @@
 <template>
   <v-app>
-    <div class="backgruond">
-      <v-main class="d-flex justify-center align-center mt-16 mb-16">
+    <div class="backgruond ">
+      <v-row justify="center" class="mt-1">
+     <img src="https://cdn.mos.cms.futurecdn.net/kPTwCmCKYJUwGbDbRZr9MX.png" alt="" width="200px" height="130px">
+
+  </v-row>
+      <v-main class="d-flex justify-center align-center mt-23 mb-9">
         <v-col cols="10" lg="4" class="mx-auto">
           <v-card class="pa-4">
             <div class="text-center">
               <!-- <v-avatar size="100" color="indigo lighten-4">
               <v-icon size="40" color="indigo">mdi-account</v-icon>
             </v-avatar> -->
-              <h2 class="grey--text">Login</h2>
+              <h2 class="black--text">Login</h2>
             </div>
             <v-form @submit.prevent="submitHandler" ref="form">
               <v-card-text>

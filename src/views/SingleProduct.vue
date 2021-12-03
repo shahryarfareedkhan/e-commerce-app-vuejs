@@ -3,13 +3,14 @@
            <!-- <v-btn class="grey mt-5 ms-5" to="/Home">Home</v-btn> -->
            <Navbar/>
 
-           <v-list-item-title
-        class="text-h3 text-center  font-weight-bold text-uppercase mt-5 mb-5 "
-        >Add to cart</v-list-item-title
+          
       >
+      <v-row>
 
-
-    <v-card class="mx-auto mt-10" max-width="344">
+          <img src="https://www.brandchannel.com/wp-content/uploads/2014/09/macys-pickup-300.jpg" alt="" height="400px" width="300px" class="mt-15  ms-15">
+          
+    <v-card class=" mx-auto" max-width="300">
+       
       
       
        <v-list-item-title
@@ -71,7 +72,15 @@
           </v-card-text>
         </div>
       </v-expand-transition>
-    </v-card>
+    </v-card> 
+     
+     
+      </v-row>
+      
+
+
+
+    
     <v-snackbar top color="green" v-model="snackbar">
       Successfully Add to Cart
     </v-snackbar>

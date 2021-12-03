@@ -13,7 +13,10 @@
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"> </v-app-bar-nav-icon>
 
-      <v-toolbar-title class="font-muli">My Store</v-toolbar-title>
+      <v-toolbar-title class="font-muli mt-2"> 
+             <img src="https://assets.website-files.com/610356d21173a02b162d6a04/6104328ed0301d69befa540c_Macys-Logo.png" alt="macys" width="200px" height="80px">
+
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -58,7 +61,7 @@
     </v-navigation-drawer>
 
     <template>
-      <v-carousel hide-delimiters height="500px">
+      <v-carousel hide-delimiters height="520px">
         <v-carousel-item
           v-for="(carousel, ii) in carousels"
           :key="ii"
@@ -185,6 +188,13 @@ export default {
 
     page: 1,
     carousels: [
+      {
+        src: "https://scontent.flhe7-2.fna.fbcdn.net/v/t39.30808-6/221210747_10158871346893037_3741864840478350838_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeErMAjduV38SepGqWVIxwiBnoObLska-EGeg5suyRr4QeyV_Sye82Eg5s-F1qy1T0oaM2zKBx3q4hy2ReW5z2qE&_nc_ohc=LXxnTsEwA5wAX9PAa_k&tn=jsfF_mfH1z-v5xSP&_nc_ht=scontent.flhe7-2.fna&oh=d43ec795563b097505fe21791ec4741a&oe=61AEA1F4" ,
+      },
+       {
+        src: "https://scontent.flhe7-1.fna.fbcdn.net/v/t1.6435-9/120846114_10158167459643037_2748091744955573078_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeF--g8dCLqJRLlgkGQ-kRBonQqRbu-1OlSdCpFu77U6VH5Aax9p0hWaVUPlAKpot5FWnUCVeQaAZkvPyk3GpkGI&_nc_ohc=Y2QFsTQsH4cAX_Fnr-q&tn=jsfF_mfH1z-v5xSP&_nc_ht=scontent.flhe7-1.fna&oh=792e661ad41971ecea7df06ad06e793e&oe=61CE67EF",
+      },
+       
       {
         src: "https://i0.wp.com/www.3djewelsindia.com/images/new-ecom-images/Banner-1.jpg",
       },

@@ -8,9 +8,10 @@
         >Categories</v-list-item-title
       >
 
+      
       <v-row>
         <v-col
-          class="mt-5"
+          class="mt-10 mb-5"
           sm="3"
           md="3"
           v-for="(CatogaryName, index) in Catogary"
@@ -115,7 +116,7 @@ export default {
   data: () => ({
     show: false,
     page: 1,
-    // drawer: null,
+    drawer: false,
   }),
   methods: {
     fetchdata(apiId) {

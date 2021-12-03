@@ -1,9 +1,11 @@
 <template>
   <v-card color="grey lighten-4" flat tile>
     <v-toolbar dense height="68px">
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 
-      <v-toolbar-title>My Store</v-toolbar-title>
+      <v-toolbar-title class="mt-3">
+         <img src="https://assets.website-files.com/610356d21173a02b162d6a04/6104328ed0301d69befa540c_Macys-Logo.png" alt="macys" width="200px" height="80px">
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 

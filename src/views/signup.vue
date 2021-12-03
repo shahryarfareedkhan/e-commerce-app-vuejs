@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <v-app>
+      <img src="https://cdn.mos.cms.futurecdn.net/kPTwCmCKYJUwGbDbRZr9MX.png" alt="">
       <v-dialog v-model="dialog" persistent max-width="600px" min-width="360px">
         <div>
           <v-tabs

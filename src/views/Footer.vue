@@ -21,7 +21,7 @@
         class="grey darken-1 py-4 text-center white--text"
         cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>My Store</strong>
+        {{ new Date().getFullYear() }} — <strong>macys</strong>
       </v-col>
     </v-row>
   </v-footer>
